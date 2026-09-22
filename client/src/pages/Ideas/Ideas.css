@@ -1,0 +1,105 @@
+.ideas-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ideas-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.ideas-header h1 {
+    margin: 0;
+    color: #263b30;
+    font-size: 30px;
+}
+
+.ideas-header p {
+    margin: 8px 0 0;
+    color: #7f8c84;
+    font-size: 14px;
+}
+
+.primary-button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: #2f6653;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #173f35;
+}
+
+.error-message {
+    color: #a33a3a;
+    margin-top: 20px;
+}
+
+.empty-state {
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #dce8d5;
+    border-bottom: 1px solid #dce8d5;
+}
+
+.empty-state h2 {
+    margin: 0;
+    color: #263b30;
+    font-size: 20px;
+}
+
+.empty-state p {
+    margin-top: 8px;
+    color: #7f8c84;
+}
+
+.ideas-list {
+    width: 100%;
+    border-top: 1px solid #dce8d5;
+}
+
+.idea-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 8px;
+    border-bottom: 1px solid #dce8d5;
+}
+
+.idea-row:hover {
+    background-color: #ffffff;
+}
+
+.idea-main {
+    min-width: 0;
+    flex: 1;
+}
+
+.idea-main h3 {
+    margin: 0;
+    color: #263b30;
+    font-size: 16px;
+}
+
+.idea-main p {
+    margin: 6px 0 0;
+    color: #7f8c84;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.idea-date {
+    flex-shrink: 0;
+    color: #7f8c84;
+    font-size: 13px;
+}
