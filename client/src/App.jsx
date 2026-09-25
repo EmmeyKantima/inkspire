@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Ideas from "./pages/Ideas/Ideas";
 import Stories from "./pages/Stories/Stories";
 
+import StoryOverview from "./pages/Stories/StoryOverview/StoryOverview";
 import StoryCharacters from "./pages/Stories/StoryCharacters/StoryCharacters";
 import StoryTimeline from "./pages/Stories/StoryTimeline/StoryTimeline";
 import StoryBuilder from "./pages/Stories/StoryBuilder/StoryBuilder";
@@ -85,6 +86,11 @@ function App() {
 
 
                     {/* Story Pages */}
+
+                    <Route
+                        path="/stories/:storyId"
+                        element={<StoryOverview />}
+                    />
 
                     <Route
                         path="/stories/:storyId/characters"

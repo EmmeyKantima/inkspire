@@ -1,0 +1,347 @@
+.story-overview-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.story-overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.page-eyebrow {
+    margin: 0 0 8px;
+    color: #2f6653;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.story-overview-header h1 {
+    margin: 0;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.story-overview-description {
+    margin: 10px 0 0;
+    color: #7f8c84;
+    line-height: 1.6;
+}
+
+.story-overview-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+}
+
+.story-overview-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    color: #7f8c84;
+    font-size: 12px;
+}
+
+.story-overview-meta span:first-child {
+    color: #2f6653;
+    font-weight: 600;
+}
+
+.edit-story-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border: 1px solid #b9cbbd;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #2f6653;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.edit-story-button:hover {
+    background-color: #dce8d5;
+}
+
+.story-overview-section {
+    margin-bottom: 20px;
+    padding: 24px;
+    border: 1px solid #dce8d5;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e7ebe5;
+}
+
+.section-heading svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #2f6653;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.section-heading p {
+    margin: 4px 0 0;
+    color: #7f8c84;
+    font-size: 12px;
+}
+
+.story-overview-content {
+    padding-top: 18px;
+}
+
+.story-overview-content p {
+    margin: 0;
+    color: #263b30;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.story-overview-content .empty-text {
+    color: #a0aaa4;
+    font-style: italic;
+}
+
+.story-overview-info {
+    margin-bottom: 0;
+}
+
+.story-info-list {
+    margin-top: 5px;
+}
+
+.story-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 48px;
+    border-bottom: 1px solid #e7ebe5;
+    font-size: 13px;
+}
+
+.story-info-row:last-child {
+    border-bottom: none;
+}
+
+.story-info-row span {
+    color: #7f8c84;
+}
+
+.story-info-row strong {
+    color: #263b30;
+    font-weight: 600;
+}
+
+.story-overview-status {
+    padding: 50px;
+    color: #7f8c84;
+    text-align: center;
+}
+
+.story-overview-error {
+    padding: 12px 15px;
+    border: 1px solid #e6caca;
+    border-radius: 7px;
+    background-color: #fbf0f0;
+    color: #9a4f4f;
+    font-size: 13px;
+}
+
+.story-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(23, 63, 53, 0.35);
+}
+
+.story-modal {
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #dce8d5;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 50px rgba(38, 59, 48, 0.2);
+}
+
+.story-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 26px 18px;
+    border-bottom: 1px solid #e7ebe5;
+}
+
+.modal-eyebrow {
+    margin: 0 0 5px;
+    color: #2f6653;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.story-modal-header h2 {
+    margin: 0;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modal-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #7f8c84;
+    cursor: pointer;
+}
+
+.modal-close-button:hover {
+    background-color: #f7f7f2;
+    color: #263b30;
+}
+
+.modal-close-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.story-form {
+    padding: 24px 26px 26px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #263b30;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd8ce;
+    border-radius: 6px;
+    outline: none;
+    background-color: #ffffff;
+    color: #263b30;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2f6653;
+    box-shadow: 0 0 0 3px rgba(47, 102, 83, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a0aaa4;
+}
+
+.form-error {
+    margin: 0 0 16px;
+    color: #9a4f4f;
+    font-size: 13px;
+}
+
+.story-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.secondary-button {
+    padding: 10px 15px;
+    border: 1px solid #b9cbbd;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #2f6653;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: #f7f7f2;
+}
+
+.secondary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.primary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 650px) {
+    .story-overview-header {
+        flex-direction: column;
+    }
+
+    .story-overview-header-right {
+        align-items: flex-start;
+    }
+
+    .story-overview-meta {
+        align-items: flex-start;
+    }
+
+    .story-overview-section {
+        padding: 20px;
+    }
+
+    .story-modal-header,
+    .story-form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

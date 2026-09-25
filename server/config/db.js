@@ -5,6 +5,8 @@ var database;
 
 async function connectDB() {
     try {
+        console.log("MONGODB_URI loaded:", !!process.env.MONGODB_URI);
+
         client = new MongoClient(process.env.MONGODB_URI);
 
         await client.connect();
@@ -18,7 +20,6 @@ async function connectDB() {
     } catch (error) {
         console.error("MongoDB connection failed:");
         console.error(error.message);
-
         process.exit(1);
     }
 }
