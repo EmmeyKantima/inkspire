@@ -388,10 +388,6 @@ function StoryCharacters() {
                             {selectedCharacter.name}
                         </h1>
 
-                        <p className="character-detail-description">
-                            Full character profile
-                            for this story.
-                        </p>
                     </div>
 
                     <button
@@ -890,18 +886,14 @@ function StoryCharacters() {
                                 return (
                                     <div
                                         className="character-row"
-                                        key={
-                                            character._id
-                                        }
+                                        key={character._id}
+                                        onClick={function () {
+                                            setSelectedCharacter(character);
+                                        }}
                                     >
                                         <button
                                             className="character-name-button"
                                             type="button"
-                                            onClick={function () {
-                                                setSelectedCharacter(
-                                                    character
-                                                );
-                                            }}
                                         >
                                             <span className="character-icon">
                                                 <Users

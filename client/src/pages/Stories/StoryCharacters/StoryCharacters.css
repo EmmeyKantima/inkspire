@@ -81,6 +81,7 @@
     min-height: 68px;
     padding: 0 20px;
     border-bottom: 1px solid #e7ebe5;
+    cursor: pointer;
 }
 
 .character-row:last-child {
@@ -692,3 +693,4 @@
         align-items: flex-start;
     }
 }
+

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Plus, BookOpen, MoreVertical, X } from "lucide-react";
 
 import API_URL from "../../api/api";
@@ -7,6 +7,8 @@ import API_URL from "../../api/api";
 import "./Stories.css";
 
 function Stories() {
+    var navigate = useNavigate();
+
     var [stories, setStories] = useState([]);
     var [loading, setLoading] = useState(true);
     var [error, setError] = useState("");
@@ -331,8 +333,6 @@ function Stories() {
                     </p>
 
                     <h1>My Stories</h1>
-
-                
                 </div>
 
                 <button
@@ -363,6 +363,7 @@ function Stories() {
                             <span>Story</span>
                             <span>Genre</span>
                             <span>Last Updated</span>
+                            <span></span>
                         </div>
                     )}
 
@@ -389,6 +390,12 @@ function Stories() {
                                 <div
                                     className="story-row"
                                     key={story._id}
+                                    onClick={function () {
+                                        navigate(
+                                            "/stories/" +
+                                                story._id
+                                        );
+                                    }}
                                 >
                                     <div className="story-main">
 
@@ -420,14 +427,6 @@ function Stories() {
                                     </div>
 
                                     <div className="story-actions">
-
-                                        <Link
-                                            to={`/stories/${story._id}`}
-                                            className="open-story-button"
-                                        >
-                                            Open Story
-                                        </Link>
-
                                         <button
                                             className="story-menu-button"
                                             type="button"
@@ -445,7 +444,6 @@ function Stories() {
                                                 size={18}
                                             />
                                         </button>
-
                                     </div>
                                 </div>
                             );
@@ -484,7 +482,10 @@ function Stories() {
                                     >
                                         <button
                                             type="button"
-                                            onClick={function () {
+                                            onClick={function (
+                                                event
+                                            ) {
+                                                event.stopPropagation();
                                                 openEditForm(
                                                     story
                                                 );
@@ -496,7 +497,10 @@ function Stories() {
                                         <button
                                             type="button"
                                             className="delete-menu-item"
-                                            onClick={function () {
+                                            onClick={function (
+                                                event
+                                            ) {
+                                                event.stopPropagation();
                                                 openDeleteModal(
                                                     story
                                                 );

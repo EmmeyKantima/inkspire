@@ -67,7 +67,7 @@
 
 .stories-list-header {
     display: grid;
-    grid-template-columns: minmax(300px, 2fr) 1fr 1fr 180px;
+    grid-template-columns: minmax(300px, 2fr) 1fr 1fr 50px;
     padding: 13px 20px;
     background-color: #f7f7f2;
     border-bottom: 1px solid #dce8d5;
@@ -80,12 +80,13 @@
 
 .story-row {
     display: grid;
-    grid-template-columns: minmax(300px, 2fr) 1fr 1fr 180px;
+    grid-template-columns: minmax(300px, 2fr) 1fr 1fr 50px;
     align-items: center;
     min-height: 100px;
     padding: 16px 20px;
     border-bottom: 1px solid #e7ebe5;
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 .story-row:hover {
@@ -149,21 +150,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 8px;
-}
-
-.open-story-button {
-    padding: 8px 12px;
-    border: 1px solid #b9cbbd;
-    border-radius: 6px;
-    color: #2f6653;
-    background-color: #ffffff;
-    font-size: 12px;
-    text-decoration: none;
-}
-
-.open-story-button:hover {
-    background-color: #dce8d5;
 }
 
 .story-menu-button {
