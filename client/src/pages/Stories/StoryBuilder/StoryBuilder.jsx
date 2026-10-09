@@ -81,6 +81,13 @@ function StoryBuilder() {
 
             setActs(actData);
 
+            setExpandedActs(
+                actData.reduce(function (expanded, act) {
+                    expanded[act._id] = true;
+                    return expanded;
+                }, {})
+            );
+
             var allChapters = [];
 
             if (actData.length > 0) {
@@ -105,6 +112,13 @@ function StoryBuilder() {
             }
 
             setChapters(allChapters);
+
+            setExpandedChapters(
+                allChapters.reduce(function (expanded, chapter) {
+                    expanded[chapter._id] = true;
+                    return expanded;
+                }, {})
+            );
 
             var allEvents = [];
             var allScenes = [];
@@ -132,6 +146,13 @@ function StoryBuilder() {
 
             setEvents(allEvents);
 
+            setExpandedEvents(
+                allEvents.reduce(function (expanded, event) {
+                    expanded[event._id] = true;
+                    return expanded;
+                }, {})
+            );
+
             if (allEvents.length > 0) {
                 var sceneRequests = allEvents.map(function (event) {
                     return fetch(
@@ -154,6 +175,7 @@ function StoryBuilder() {
             }
 
             setScenes(allScenes);
+            
         } catch (error) {
             setError(error.message);
         } finally {
