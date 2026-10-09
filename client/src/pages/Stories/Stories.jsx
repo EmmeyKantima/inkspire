@@ -180,26 +180,27 @@ function Stories() {
                 return;
             }
 
+            var savedStory = data.story || data;
+
             if (editingStory) {
-                setStories(
-                    stories.map(function (story) {
-                        if (
-                            story._id ===
-                            editingStory._id
-                        ) {
-                            return data;
-                        }
-
-                        return story;
-                    })
-                );
+                setStories(function (currentStories) {
+                    return currentStories.map(function (story) {
+                        return story._id === editingStory._id
+                            ? savedStory
+                            : story;
+                    });
+                });
+                closeForm();
             } else {
-                setStories(
-                    [data].concat(stories)
-                );
-            }
+                setStories(function (currentStories) {
+                    return [savedStory].concat(currentStories);
+                });
+                closeForm();
 
-            closeForm();
+                if (savedStory._id) {
+                    navigate("/stories/" + savedStory._id);
+                }
+            }
         } catch (error) {
             console.error(
                 "Save story error:",
