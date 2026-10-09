@@ -395,7 +395,7 @@ function StoryWriting() {
 
         try {
             var response = await fetch(
-                API_URL + "/chapters/" + chapterId + "/status",
+                API_URL + "/chapters/" + chapterId,
                 {
                     method: "PUT",
                     headers: {
@@ -871,8 +871,18 @@ function StoryWriting() {
             </div>
 
             {showGuide && (
-                <div className="guide-overlay">
-                    <aside className="story-guide-panel">
+                <div
+                    className="guide-overlay"
+                    onClick={function () {
+                        setShowGuide(false);
+                    }}
+                >
+                    <aside
+                        className="story-guide-panel"
+                        onClick={function (event) {
+                            event.stopPropagation();
+                        }}
+                    >
                         <div className="guide-header">
                             <div>
                                 <p>
